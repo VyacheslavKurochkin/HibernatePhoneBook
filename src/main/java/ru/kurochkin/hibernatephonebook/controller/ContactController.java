@@ -68,12 +68,11 @@ public class ContactController {
     }
 
     @DeleteMapping
-    public BaseResponse delete(@RequestBody ContactDto contactDto) {
-        if (contactDto.getId() == null) {
-            return BaseResponse.getErrorResponse("Удаление контакта: объект должен содержать id контакта");
+    public BaseResponse delete(@RequestBody List<Integer> ids) {
+        if (ids == null) {
+            return BaseResponse.getErrorResponse("Удаление контакта: не передан id контакта");
         }
 
-        Contact contact = contactDtoToContactConverter.convert(contactDto);
-        return contactService.delete(contact);
+        return contactService.delete(ids);
     }
 }
