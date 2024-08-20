@@ -4,7 +4,7 @@ import ru.kurochkin.hibernatephonebook.dto.BaseResponse;
 
 import java.util.List;
 
-public interface PhoneBookService<T> {
+public interface CrudService<T> {
     List<T> findAll();
 
     List<T> findAll(String term);

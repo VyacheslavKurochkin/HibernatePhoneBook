@@ -43,7 +43,7 @@
 			</div>
 		</form>
 
-		<div class="">
+		<div class="mb-3">
 			<button @click="showDeleteContactConfirm(null)"
 					class="btn btn-danger"
 					type="button">
@@ -65,7 +65,7 @@
 					<th class="col-1">№</th>
 					<th class="col-4">Имя</th>
 					<th class="col-3">Телефон</th>
-					<th></th>
+					<th class="col-2"></th>
 				</tr>
 				</thead>
 				<tbody class="align-middle">

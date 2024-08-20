@@ -70,7 +70,7 @@ public class ContactController {
     @DeleteMapping
     public BaseResponse delete(@RequestBody List<Integer> ids) {
         if (ids == null) {
-            return BaseResponse.getErrorResponse("Удаление контакта: не передан id контакта");
+            return BaseResponse.getErrorResponse("Удаление контактов: не переданы id контактов");
         }
 
         return contactService.delete(ids);

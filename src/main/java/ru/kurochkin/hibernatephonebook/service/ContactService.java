@@ -9,7 +9,7 @@ import ru.kurochkin.hibernatephonebook.entity.Contact;
 import java.util.List;
 
 @Service
-public class ContactService implements PhoneBookService<Contact> {
+public class ContactService implements CrudService<Contact> {
     private final ContactRepository contactRepository;
 
     public ContactService(ContactRepository contactRepository) {
